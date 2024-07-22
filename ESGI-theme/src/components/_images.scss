@@ -1,0 +1,18 @@
+ .about-us-image img, .service-image{
+    padding: 2rem 0;
+    width: 100%;
+}
+
+.homepage-main-image{
+    padding: 5rem 0;
+}
+.about-us-image img{
+    max-width: rem(660);
+  
+}
+
+.homepage-main-image{
+    display: flex;
+    justify-content: flex-end;
+
+}

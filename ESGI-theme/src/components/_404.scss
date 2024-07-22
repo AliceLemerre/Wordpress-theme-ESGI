@@ -1,0 +1,32 @@
+.page-404{
+    background-color: var(--main-color);
+    color : var(--white);
+}
+
+.searchform {
+    position: relative;
+    z-index: 0;
+
+    input[name="s"] {
+      width: 100%;
+      outline: none;
+      color: white;
+      border-bottom: rem(2) solid white;
+      background-color: var(--main-color);
+      padding : 0.5rem;
+    }
+
+    input[type="submit"] {
+      position: absolute;
+      right: 0;
+      cursor: pointer;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 1.6rem;
+      height: 1.6rem;
+      color: white;
+
+    }
+  }
+
+

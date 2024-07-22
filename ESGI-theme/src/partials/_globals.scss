@@ -1,0 +1,145 @@
+*,
+*::before,
+*::after {box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button, input, optgroup, select, textarea {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+:root {
+	--main-color: #050A3A;
+	--white: #fff;
+	--black: #000;
+	--grey: ##8A8A8A;
+
+	--bg-color: var(--white);
+	--text-color: var(--black);
+}
+
+body {
+	font-family: $font2;
+	background-color: var(--bg-color);
+	color: var(--text-color);
+	margin: 0;
+	padding: 0;
+}
+
+
+h1{
+	font-size: 2.5rem;
+	font-weight: 600;
+	max-width: rem(1300);
+}
+
+h2{
+	font-size: 2rem;
+	font-weight: 600;
+}
+
+
+
+
+h3{
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+p{
+	font-size: 1rem;
+	font-weight: 400;
+	color: var(--grey);
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+svg {
+	path {
+		fill: white;
+	}
+	
+}
+
+
+.title-underline {
+	width: 100%;
+	height: 4px;
+	background: linear-gradient(90deg, #FFD0A8 0%, #FF4FC0 100%);
+  }
+  
+main{
+	margin: 0 3rem;
+}
+
+@media (min-width: 700px) {
+	main{
+		margin: 0;
+	}
+		
+	h1{
+		font-size: rem(84);
+
+	}
+		
+
+	h1, h2{
+		padding: 2rem rem(75);
+	}
+
+	.text-content{
+		padding: 2rem rem(75);
+		max-width: rem(757);
+	}
+}
+.underline{
+	position: relative;
+	display: inline-block;
+}
+
+.underline::after{
+	content: "";
+	position: absolute;
+	right: 0;
+	bottom: -0.3rem;
+	width: 100%;
+	height: 0.3rem;
+	background: linear-gradient(90deg, #FFD0A8 0%, #FF4FC0 100%);
+	
+  }
+

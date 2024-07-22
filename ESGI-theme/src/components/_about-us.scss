@@ -1,0 +1,21 @@
+.about-us-list{
+    max-width: rem(539);
+}
+
+.about-us-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+@media (min-width: 700px) {
+    .about-us-section {
+        flex-direction: row;
+        gap: 10rem;
+        justify-content: start;
+
+    }
+}

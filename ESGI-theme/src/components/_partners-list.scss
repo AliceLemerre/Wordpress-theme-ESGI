@@ -1,0 +1,27 @@
+.partners-list{
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem 0;
+
+}
+
+@media (min-width: 500px) {
+    .partners-list {
+        flex-direction: row;
+        width: 100%;
+		padding: 2rem rem(75);
+    }
+}
+
+
+@media (min-width: 1350px) {
+    .partners-list {
+        justify-content: space-between;
+     
+    }
+}
