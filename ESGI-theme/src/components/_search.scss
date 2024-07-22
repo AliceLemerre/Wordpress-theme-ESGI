@@ -1,0 +1,21 @@
+  
+.posts-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 2rem 4.6875rem;
+    gap: 2rem;
+    margin: 0 auto;
+}
+
+.post-item {
+    text-align: left;
+
+    width:25%; 
+    box-sizing: border-box;
+
+    a >*{
+        padding : 0.5rem 0;
+    }
+}
+

@@ -4998,17 +4998,20 @@ main {
 
 .posts-list {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 3rem;
+  padding: 2rem 4.6875rem;
+  gap: 2rem;
   margin: 0 auto;
 }
 
 .post-item {
   text-align: left;
   width: 25%;
-  padding: 0.9375rem;
   box-sizing: border-box;
+}
+.post-item a > * {
+  padding: 0.5rem 0;
 }
 
 /*# sourceMappingURL=style.css.map */
