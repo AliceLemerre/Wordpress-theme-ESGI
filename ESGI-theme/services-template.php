@@ -23,7 +23,7 @@ get_header() ?>
                 <?php  if ( has_post_thumbnail() ) { //définissez une image dans vos réglages de page pour remplacer celle par défaut
                 the_post_thumbnail();
                 } else { ?>
-                <img src="<?php bloginfo('template_directory'); ?>/images/5.png" alt="<?php the_title(); ?>" />
+                <img src="<?php bloginfo('template_directory'); ?>/images/4.png" alt="<?php the_title(); ?>" />
                 <?php } ?>
                 </div>
        
