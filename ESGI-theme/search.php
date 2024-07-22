@@ -15,17 +15,39 @@ $args = [
 ];
 $the_query = new WP_Query($args);
 ?>
+
 <h1>Search results for: <span class="underline">"<?php echo esc_html($search_query); ?>"</span></h1>
 
 <?php if ($the_query->have_posts()) : ?>
   <div class="search-results">
+    <div class="posts-list">
+        <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+            <div class="post-item">
+                <a href="<?= esc_url(get_permalink()) ?>">
+                    <h2><?= esc_html(get_the_title()) ?></h2>
+                    <time><?= esc_html(get_the_date('j F Y')) ?></time>
+                </a>
+                <p><?= esc_html(get_the_excerpt()) ?></p>
+            </div>
+        <?php endwhile; ?>
+    </div>
     <?php
-        get_template_part('posts-list', null, ['query' => $the_query]);
+    $big = 999999999; // need an unlikely integer
+
+    echo paginate_links([
+        'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
+        'format' => '?paged=%#%',
+        'current' => max(1, get_query_var('paged', 1)),
+        'total' => $the_query->max_num_pages
+    ]);
     ?>
   </div>
 <?php else : ?>
     <p>No search result found for the term "<?php echo esc_html($search_query); ?>".</p>
 <?php endif;
+
+// Restore original Post Data
+wp_reset_postdata();
 
 get_footer();
 ?>
